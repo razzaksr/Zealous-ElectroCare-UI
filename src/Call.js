@@ -14,7 +14,7 @@ export const fetchOneService = async(id) => {
 }
 
 export const fetchServices = async() =>{
-    // console.log(`fetch will call ${backend}/services/`)
+    console.log(`fetch will call ${backend}/services/`)
     const data = await axios.get(`${backend}/services/`)
     // console.log(data.data)
     return data.data
