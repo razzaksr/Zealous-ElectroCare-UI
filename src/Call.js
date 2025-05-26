@@ -1,7 +1,7 @@
 import axios from "axios"
 
-// const backend = "http://localhost:8081/api"
-const backend = "http://12e1-2405-201-e023-a075-9d8d-8a4c-f53f-e20e.ngrok-free.app/api"
+const backend = process.env.REACT_APP_BACKEND
+// console.log(backend)
 const logged = localStorage.getItem("logged")
 
 export const fetchOneService = async(id) => {
@@ -14,9 +14,9 @@ export const fetchOneService = async(id) => {
 }
 
 export const fetchServices = async() =>{
-    console.log(`fetch will call ${backend}/services/`)
+    // console.log(`fetch will call ${backend}/services/`)
     const data = await axios.get(`${backend}/services/`)
-    console.log(data.data)
+    // console.log(data.data)
     return data.data
 }
 
